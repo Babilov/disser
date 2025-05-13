@@ -1,0 +1,62 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# Environment variables
+*.env
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# pytest
+.cache/
+*.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+
+# Pydantic / FastAPI cache (if any)
+__pydantic__/
+
+# Static build artifacts
+dist/
+build/
+*.egg-info/
+
+# SQLite databases (if you're using them)
+*.sqlite3
+
+# Docker-related (если используешь)
+*.pid
+*.db
+docker-compose.override.yml
+.env.*
+
+# Node-related (если frontend есть внутри проекта)
+node_modules/
+
+*.pt
