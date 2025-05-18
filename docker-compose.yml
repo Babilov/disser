@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  fastapi-server:
+    build: ./fastapi_server
+    container_name: fastapi-server
+    ports:
+      - "8000:8000"
+    depends_on:
+      - rtsp-server
+    networks:
+      - my-network
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+
+  rtsp-server:
+    build: ./rtsp
+    container_name: rtsp-server
+    networks:
+      - my-network
+    ports:
+      - "8554:8554"
+      
+networks:
+  my-network:
+    driver: bridge
